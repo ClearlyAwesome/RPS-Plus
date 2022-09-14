@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4584A897CE80B18822917164 /* libPods-Rock Paper Scissors Plus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EE8B86F65A5A9A081EF621 /* libPods-Rock Paper Scissors Plus.a */; };
+		5100032125339262002A94E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5100032025339262002A94E4 /* AppDelegate.swift */; };
+		5100032325339262002A94E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5100032225339262002A94E4 /* SceneDelegate.swift */; };
+		5100032525339262002A94E4 /* GamePlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5100032425339262002A94E4 /* GamePlayViewController.swift */; };
+		5100032825339262002A94E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5100032625339262002A94E4 /* Main.storyboard */; };
+		5100032A25339263002A94E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5100032925339263002A94E4 /* Assets.xcassets */; };
+		5100032D25339263002A94E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5100032B25339263002A94E4 /* LaunchScreen.storyboard */; };
+		513C7748259AF63500B4FF0E /* ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 513C7747259AF63500B4FF0E /* ding.wav */; };
+		513C774B259AF7C200B4FF0E /* final Ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 513C774A259AF7C200B4FF0E /* final Ding.wav */; };
+		513C7750259AFB3300B4FF0E /* gasp.wav in Resources */ = {isa = PBXBuildFile; fileRef = 513C774F259AFB3300B4FF0E /* gasp.wav */; };
+		513C7753259AFC2300B4FF0E /* lose.wav in Resources */ = {isa = PBXBuildFile; fileRef = 513C7752259AFC2300B4FF0E /* lose.wav */; };
+		5156256D25A1821C0084F859 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5156256C25A1821C0084F859 /* GameOverViewController.swift */; };
+		5190A30E27135C3800F9DA03 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5190A30D27135C3800F9DA03 /* Extensions.swift */; };
+		5190A3102713625A00F9DA03 /* MailUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5190A30F2713625A00F9DA03 /* MailUsViewController.swift */; };
+		5190CC6A2702EF6B003C41E5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5190CC692702EF6B003C41E5 /* SettingsViewController.swift */; };
+		51A4DF1E2536760F00E6C8A5 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A4DF1D2536760F00E6C8A5 /* GameLogic.swift */; };
+		51B7BE1728711049003E5FA4 /* ChooseWeapons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B7BE1628711049003E5FA4 /* ChooseWeapons.swift */; };
+		51C5D82B27075B8E00BBE325 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C5D82A27075B8E00BBE325 /* WebViewController.swift */; };
+		51C5D82D270779EC00BBE325 /* AdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C5D82C270779EC00BBE325 /* AdViewController.swift */; };
+		51C97DA1270F676300A31FAE /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C97D9E270F676300A31FAE /* StartViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03EE8B86F65A5A9A081EF621 /* libPods-Rock Paper Scissors Plus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Rock Paper Scissors Plus.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1015F0ED08FBB7EE23B5B46F /* Pods-Rock Paper Scissors Plus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rock Paper Scissors Plus.debug.xcconfig"; path = "Target Support Files/Pods-Rock Paper Scissors Plus/Pods-Rock Paper Scissors Plus.debug.xcconfig"; sourceTree = "<group>"; };
+		5100031D25339262002A94E4 /* Rock Paper Scissors Plus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rock Paper Scissors Plus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5100032025339262002A94E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5100032225339262002A94E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5100032425339262002A94E4 /* GamePlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayViewController.swift; sourceTree = "<group>"; };
+		5100032725339262002A94E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5100032925339263002A94E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5100032C25339263002A94E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5100032E25339263002A94E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		513C7747259AF63500B4FF0E /* ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ding.wav; sourceTree = "<group>"; };
+		513C774A259AF7C200B4FF0E /* final Ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "final Ding.wav"; sourceTree = "<group>"; };
+		513C774F259AFB3300B4FF0E /* gasp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gasp.wav; sourceTree = "<group>"; };
+		513C7752259AFC2300B4FF0E /* lose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lose.wav; sourceTree = "<group>"; };
+		5156256C25A1821C0084F859 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
+		5190A30D27135C3800F9DA03 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		5190A30F2713625A00F9DA03 /* MailUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailUsViewController.swift; sourceTree = "<group>"; };
+		5190CC692702EF6B003C41E5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		51A4DF1D2536760F00E6C8A5 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
+		51B7BE1628711049003E5FA4 /* ChooseWeapons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseWeapons.swift; sourceTree = "<group>"; };
+		51C5D82A27075B8E00BBE325 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		51C5D82C270779EC00BBE325 /* AdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewController.swift; sourceTree = "<group>"; };
+		51C97D9E270F676300A31FAE /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		BE8F2DEEB8277AF82F1F5077 /* Pods-Rock Paper Scissors Plus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rock Paper Scissors Plus.release.xcconfig"; path = "Target Support Files/Pods-Rock Paper Scissors Plus/Pods-Rock Paper Scissors Plus.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5100031A25339262002A94E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4584A897CE80B18822917164 /* libPods-Rock Paper Scissors Plus.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5100031425339262002A94E4 = {
+			isa = PBXGroup;
+			children = (
+				5100031F25339262002A94E4 /* Rock Paper Scissors Plus */,
+				5100031E25339262002A94E4 /* Products */,
+				6D0689A6E470E4F0B9AE2C18 /* Pods */,
+				722E38DD69162B81ADDABB65 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5100031E25339262002A94E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5100031D25339262002A94E4 /* Rock Paper Scissors Plus.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5100031F25339262002A94E4 /* Rock Paper Scissors Plus */ = {
+			isa = PBXGroup;
+			children = (
+				5100032025339262002A94E4 /* AppDelegate.swift */,
+				5100032225339262002A94E4 /* SceneDelegate.swift */,
+				513DCF422548C135001DF84B /* View */,
+				5102F2052581347C006C2D25 /* Model */,
+				513DCF3F2548C10F001DF84B /* Controller */,
+				5100032925339263002A94E4 /* Assets.xcassets */,
+				513C774D259AF7CC00B4FF0E /* Sounds */,
+				5100032B25339263002A94E4 /* LaunchScreen.storyboard */,
+				5100032E25339263002A94E4 /* Info.plist */,
+			);
+			path = "Rock Paper Scissors Plus";
+			sourceTree = "<group>";
+		};
+		5102F2052581347C006C2D25 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				51A4DF1D2536760F00E6C8A5 /* GameLogic.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		513C774D259AF7CC00B4FF0E /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				513C774A259AF7C200B4FF0E /* final Ding.wav */,
+				513C774F259AFB3300B4FF0E /* gasp.wav */,
+				513C7752259AFC2300B4FF0E /* lose.wav */,
+				513C7747259AF63500B4FF0E /* ding.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		513DCF3F2548C10F001DF84B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				51B7BE1628711049003E5FA4 /* ChooseWeapons.swift */,
+				5156256C25A1821C0084F859 /* GameOverViewController.swift */,
+				5100032425339262002A94E4 /* GamePlayViewController.swift */,
+				5190CC692702EF6B003C41E5 /* SettingsViewController.swift */,
+				51C97D9E270F676300A31FAE /* StartViewController.swift */,
+				516ED49F28D2876200DEA8E6 /* No Storyboards */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		513DCF422548C135001DF84B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5100032625339262002A94E4 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		516ED49F28D2876200DEA8E6 /* No Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5190A30D27135C3800F9DA03 /* Extensions.swift */,
+				5190A30F2713625A00F9DA03 /* MailUsViewController.swift */,
+				51C5D82A27075B8E00BBE325 /* WebViewController.swift */,
+				51C5D82C270779EC00BBE325 /* AdViewController.swift */,
+			);
+			path = "No Storyboards";
+			sourceTree = "<group>";
+		};
+		6D0689A6E470E4F0B9AE2C18 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1015F0ED08FBB7EE23B5B46F /* Pods-Rock Paper Scissors Plus.debug.xcconfig */,
+				BE8F2DEEB8277AF82F1F5077 /* Pods-Rock Paper Scissors Plus.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		722E38DD69162B81ADDABB65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03EE8B86F65A5A9A081EF621 /* libPods-Rock Paper Scissors Plus.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5100031C25339262002A94E4 /* Rock Paper Scissors Plus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5100033125339263002A94E4 /* Build configuration list for PBXNativeTarget "Rock Paper Scissors Plus" */;
+			buildPhases = (
+				742E506C4C756401149F7765 /* [CP] Check Pods Manifest.lock */,
+				5100031925339262002A94E4 /* Sources */,
+				5100031A25339262002A94E4 /* Frameworks */,
+				5100031B25339262002A94E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Rock Paper Scissors Plus";
+			productName = "Rock Paper Scissors Plus";
+			productReference = 5100031D25339262002A94E4 /* Rock Paper Scissors Plus.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5100031525339262002A94E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				KnownAssetTags = (
+					dinosaur,
+				);
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					5100031C25339262002A94E4 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 5100031825339262002A94E4 /* Build configuration list for PBXProject "Rock Paper Scissors Plus copy" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5100031425339262002A94E4;
+			productRefGroup = 5100031E25339262002A94E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5100031C25339262002A94E4 /* Rock Paper Scissors Plus */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5100031B25339262002A94E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				513C774B259AF7C200B4FF0E /* final Ding.wav in Resources */,
+				5100032D25339263002A94E4 /* LaunchScreen.storyboard in Resources */,
+				5100032A25339263002A94E4 /* Assets.xcassets in Resources */,
+				513C7753259AFC2300B4FF0E /* lose.wav in Resources */,
+				513C7750259AFB3300B4FF0E /* gasp.wav in Resources */,
+				513C7748259AF63500B4FF0E /* ding.wav in Resources */,
+				5100032825339262002A94E4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		742E506C4C756401149F7765 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rock Paper Scissors Plus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5100031925339262002A94E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51C5D82D270779EC00BBE325 /* AdViewController.swift in Sources */,
+				5100032525339262002A94E4 /* GamePlayViewController.swift in Sources */,
+				5190A3102713625A00F9DA03 /* MailUsViewController.swift in Sources */,
+				51C5D82B27075B8E00BBE325 /* WebViewController.swift in Sources */,
+				51C97DA1270F676300A31FAE /* StartViewController.swift in Sources */,
+				5100032125339262002A94E4 /* AppDelegate.swift in Sources */,
+				51A4DF1E2536760F00E6C8A5 /* GameLogic.swift in Sources */,
+				5156256D25A1821C0084F859 /* GameOverViewController.swift in Sources */,
+				5100032325339262002A94E4 /* SceneDelegate.swift in Sources */,
+				5190A30E27135C3800F9DA03 /* Extensions.swift in Sources */,
+				5190CC6A2702EF6B003C41E5 /* SettingsViewController.swift in Sources */,
+				51B7BE1728711049003E5FA4 /* ChooseWeapons.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5100032625339262002A94E4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5100032725339262002A94E4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5100032B25339263002A94E4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5100032C25339263002A94E4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5100032F25339263002A94E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5100033025339263002A94E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5100033225339263002A94E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1015F0ED08FBB7EE23B5B46F /* Pods-Rock Paper Scissors Plus.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6CX676QSU4;
+				INFOPLIST_FILE = "Rock Paper Scissors Plus/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Cleary.Rock-Paper-Scissors-Plus";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		5100033325339263002A94E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE8F2DEEB8277AF82F1F5077 /* Pods-Rock Paper Scissors Plus.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6CX676QSU4;
+				INFOPLIST_FILE = "Rock Paper Scissors Plus/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Cleary.Rock-Paper-Scissors-Plus";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5100031825339262002A94E4 /* Build configuration list for PBXProject "Rock Paper Scissors Plus copy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5100032F25339263002A94E4 /* Debug */,
+				5100033025339263002A94E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5100033125339263002A94E4 /* Build configuration list for PBXNativeTarget "Rock Paper Scissors Plus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5100033225339263002A94E4 /* Debug */,
+				5100033325339263002A94E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5100031525339262002A94E4 /* Project object */;
+}

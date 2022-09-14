@@ -57,7 +57,8 @@ struct GameState {
             case (.paper, .nuclearBomb): return .lose
             case (.paper, .cockroach): return .win
             case (.paper, .boot): return .lose
-                
+            
+            //Scissors is the choice
             case (.scissors, .rock): return .lose
             case (.scissors, .paper): return .win
             case (.scissors, .scissors): return .draw
@@ -69,7 +70,8 @@ struct GameState {
             case (.scissors, .car): return .win
             case (.scissors, .dinosaur): return .lose
             case (.scissors, .boot): return .win
-                
+             
+            //Meteor is the choice
             case (.meteor, .rock): return .win
             case (.meteor, .paper): return .win
             case (.meteor, .scissors): return .win
@@ -81,7 +83,8 @@ struct GameState {
             case (.meteor, .car): return .win
             case (.meteor, .dinosaur): return .win
             case (.meteor, .boot): return .win
-                
+            
+            //Dynamite is the choice
             case (.dynamite, .rock): return .win
             case (.dynamite, .paper): return .win
             case (.dynamite, .scissors): return .lose
@@ -94,6 +97,7 @@ struct GameState {
             case (.dynamite, .dinosaur): return .win
             case (.dynamite, .boot): return .win
                 
+            //Nuke is the choice
             case (.nuclearBomb, .rock): return .win
             case (.nuclearBomb, .paper): return .win
             case (.nuclearBomb, .scissors): return .win
@@ -106,6 +110,7 @@ struct GameState {
             case (.nuclearBomb, .dinosaur): return .win
             case (.nuclearBomb, .boot): return .win
                 
+            //Cockroach is the choice
             case (.cockroach, .rock): return .lose
             case (.cockroach, .paper): return .lose
             case (.cockroach, .scissors): return .lose
@@ -118,6 +123,7 @@ struct GameState {
             case (.cockroach, .dinosaur): return .win
             case (.cockroach, .boot): return .lose
                 
+            //Car is the choice
             case (.car, .rock): return .lose
             case (.car, .paper): return .win
             case (.car, .scissors): return .lose
@@ -130,7 +136,8 @@ struct GameState {
             case (.car, .dinosaur): return .lose
             case (.car, .boot): return .win
                 
-            case (.dinosaur, .rock): return .lose
+            //Dinosaur is the choice
+            case (.dinosaur, .rock): return .win
             case (.dinosaur, .paper): return .win
             case (.dinosaur, .scissors): return .win
             //Premium weapons
@@ -142,6 +149,7 @@ struct GameState {
             case (.dinosaur, .dinosaur): return .draw
             case (.dinosaur, .boot): return .win
                 
+            //Boot is the choice
             case (.boot, .rock): return .lose
             case (.boot, .paper): return .win
             case (.boot, .scissors): return .lose

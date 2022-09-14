@@ -1,0 +1,6 @@
+module Pods_Rock_Paper_Scissors_Plus {
+  umbrella header "Pods-Rock Paper Scissors Plus-umbrella.h"
+
+  export *
+  module * { export * }
+}

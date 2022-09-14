@@ -1,184 +1,155 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Co-hm-mFl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Co-hm-mFl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Game Play View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Rock_Paper_Scissors_Plus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GamePlayViewController" customModule="Rock_Paper_Scissors_Plus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="i8x-cJ-sBu" userLabel="Everything Stack View">
-                                <rect key="frame" x="20" y="94" width="350" height="656.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="i8x-cJ-sBu" userLabel="Everything Stack View">
+                                <rect key="frame" x="20" y="98" width="374" height="734"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="fd0-L9-RGy" userLabel="Images Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="431.5"/>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mMi-r6-XbD" userLabel="OppenentScoreAndChoice">
+                                        <rect key="frame" x="47" y="0.0" width="280" height="200"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="mMi-r6-XbD" userLabel="OppenentScoreAndChoice">
-                                                <rect key="frame" x="0.0" y="0.0" width="350" height="150"/>
+                                            <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9UQ-Sd-FfN" userLabel="Choose Weapons Stack">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="80"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cph-9V-l3o">
-                                                        <rect key="frame" x="125" y="0.0" width="100" height="100"/>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <accessibility key="accessibilityConfiguration" label="user">
-                                                            <bool key="isElement" value="YES"/>
-                                                        </accessibility>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8B-nK-bhS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="100" id="7Us-qP-1Sh"/>
-                                                            <constraint firstAttribute="width" constant="100" id="eKx-wt-MYj"/>
+                                                            <constraint firstAttribute="height" constant="80" id="7c4-CN-fou"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="Vfh-r7-ord"/>
                                                         </constraints>
-                                                    </imageView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1oV-hM-eR9" userLabel="OpponentScorePicture">
-                                                        <rect key="frame" x="145" y="130" width="60" height="20"/>
-                                                        <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wyB-3o-l6B">
-                                                                <rect key="frame" x="0.0" y="0.5" width="20" height="19"/>
-                                                                <color key="tintColor" red="0.12941176469999999" green="0.1450980392" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="20" id="886-lf-uYf"/>
-                                                                    <constraint firstAttribute="height" constant="20" id="mbb-Tz-HUT"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="U30-uG-4Za">
-                                                                <rect key="frame" x="20" y="0.5" width="20" height="19"/>
-                                                                <color key="tintColor" red="0.12941176469999999" green="0.1450980392" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="20" id="2HS-Sf-dMh"/>
-                                                                    <constraint firstAttribute="height" constant="20" id="SbB-y0-0EV"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="syZ-5G-DiB">
-                                                                <rect key="frame" x="40" y="0.5" width="20" height="19"/>
-                                                                <color key="tintColor" red="0.12941176469999999" green="0.1450980392" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="20" id="Gri-bn-WaG"/>
-                                                                    <constraint firstAttribute="height" constant="20" id="Vdu-Dg-THw"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                        </subviews>
-                                                    </stackView>
+                                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                        <state key="normal" title="Weapon1" image="nuclearBomb"/>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPd-bI-eKZ">
+                                                        <rect key="frame" x="100" y="0.0" width="80" height="80"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="80" id="224-36-5y0"/>
+                                                            <constraint firstAttribute="width" constant="80" id="NGO-r7-lSo"/>
+                                                        </constraints>
+                                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                        <state key="normal" title="Weapon2" image="car"/>
+                                                    </button>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1p-ws-C11">
+                                                        <rect key="frame" x="200" y="0.0" width="80" height="80"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="1uT-nu-RcE"/>
+                                                            <constraint firstAttribute="height" constant="80" id="DGR-y2-loS"/>
+                                                        </constraints>
+                                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                        <state key="normal" title="Weapon3" image="boot"/>
+                                                    </button>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Choose your weapon to begin" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="MDP-VM-YrR">
-                                                <rect key="frame" x="0.0" y="200" width="350" height="31.5"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cph-9V-l3o">
+                                                <rect key="frame" x="90" y="100" width="100" height="100"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <accessibility key="accessibilityConfiguration" label="user">
+                                                    <bool key="isElement" value="YES"/>
+                                                </accessibility>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="350" id="bVy-FG-kGs"/>
-                                                    <constraint firstAttribute="height" constant="31.5" id="xrN-vT-imL"/>
+                                                    <constraint firstAttribute="height" constant="100" id="7Us-qP-1Sh"/>
+                                                    <constraint firstAttribute="width" constant="100" id="eKx-wt-MYj"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="26"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="e0k-Xk-fia">
+                                        <rect key="frame" x="25.5" y="258" width="323" height="92"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Choose your weapon to begin" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="MDP-VM-YrR">
+                                                <rect key="frame" x="0.0" y="0.0" width="323" height="24"/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="19"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="PiX-Y9-PQS" userLabel="UserScoreAndChoice">
-                                                <rect key="frame" x="0.0" y="281.5" width="350" height="150"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3-5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5s-ze-vm7">
+                                                <rect key="frame" x="126" y="44" width="71.5" height="48"/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="38"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PiX-Y9-PQS" userLabel="UserScoreAndChoice">
+                                        <rect key="frame" x="47" y="407.5" width="280" height="200"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Zr-fQ-OGD">
+                                                <rect key="frame" x="90" y="0.0" width="100" height="100"/>
+                                                <color key="tintColor" systemColor="systemBlueColor"/>
+                                                <accessibility key="accessibilityConfiguration" label="user">
+                                                    <bool key="isElement" value="YES"/>
+                                                </accessibility>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="MtS-3B-ZIk"/>
+                                                    <constraint firstAttribute="width" constant="100" id="ei7-cF-nLb"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hEU-vP-AET" userLabel="Choose Weapons Stack">
+                                                <rect key="frame" x="0.0" y="120" width="280" height="80"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Zr-fQ-OGD">
-                                                        <rect key="frame" x="125" y="0.0" width="100" height="100"/>
-                                                        <color key="tintColor" systemColor="systemBlueColor"/>
-                                                        <accessibility key="accessibilityConfiguration" label="user">
-                                                            <bool key="isElement" value="YES"/>
-                                                        </accessibility>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zt0-TS-O2o">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="100" id="MtS-3B-ZIk"/>
-                                                            <constraint firstAttribute="width" constant="100" id="ei7-cF-nLb"/>
+                                                            <constraint firstAttribute="height" constant="80" id="8Pl-jH-P2f"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="Phx-ey-K2I"/>
                                                         </constraints>
-                                                    </imageView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzz-He-gLI" userLabel="UserScorePicture">
-                                                        <rect key="frame" x="145" y="130" width="60" height="20"/>
-                                                        <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cSS-bm-DJj">
-                                                                <rect key="frame" x="0.0" y="0.5" width="20" height="19"/>
-                                                                <color key="tintColor" red="0.12941176469999999" green="0.1450980392" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="20" id="mzJ-lX-u0c"/>
-                                                                    <constraint firstAttribute="width" constant="20" id="paW-Nj-vBW"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VEK-GI-JfZ">
-                                                                <rect key="frame" x="20" y="0.5" width="20" height="19"/>
-                                                                <color key="tintColor" red="0.12941176469999999" green="0.1450980392" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="20" id="KAe-ay-vHb"/>
-                                                                    <constraint firstAttribute="height" constant="20" id="s1c-5f-pdU"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Mmx-zg-eYt">
-                                                                <rect key="frame" x="40" y="0.5" width="20" height="19"/>
-                                                                <color key="tintColor" red="0.12941176469999999" green="0.1450980392" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="20" id="C9V-vb-OJb"/>
-                                                                    <constraint firstAttribute="width" constant="20" id="Zjw-XU-QK5"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                        </subviews>
-                                                    </stackView>
+                                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                        <state key="normal" title="Weapon1" image="nuclearBomb"/>
+                                                        <connections>
+                                                            <action selector="chooseWeapon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ec2-VQ-uAq"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mpl-rU-A6Y">
+                                                        <rect key="frame" x="100" y="0.0" width="80" height="80"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="80" id="7uR-vz-G5w"/>
+                                                            <constraint firstAttribute="width" constant="80" id="AGN-YH-iDI"/>
+                                                        </constraints>
+                                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                        <state key="normal" title="Weapon2" image="car"/>
+                                                        <connections>
+                                                            <action selector="chooseWeapon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JZy-bo-Yxd"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wJ-Gg-FF8">
+                                                        <rect key="frame" x="200" y="0.0" width="80" height="80"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="BbU-ez-RbE"/>
+                                                            <constraint firstAttribute="height" constant="80" id="jlU-93-aGQ"/>
+                                                        </constraints>
+                                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                        <state key="normal" title="Weapon3" image="boot"/>
+                                                        <connections>
+                                                            <action selector="chooseWeapon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GVx-v2-Uvx"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="mMi-r6-XbD" firstAttribute="leading" secondItem="fd0-L9-RGy" secondAttribute="leading" id="0R3-5I-I0A"/>
-                                            <constraint firstAttribute="trailing" secondItem="PiX-Y9-PQS" secondAttribute="trailing" id="2RG-gu-1HC"/>
-                                            <constraint firstAttribute="trailing" secondItem="mMi-r6-XbD" secondAttribute="trailing" id="6UU-tu-vgr"/>
-                                            <constraint firstItem="MDP-VM-YrR" firstAttribute="centerY" secondItem="fd0-L9-RGy" secondAttribute="centerY" id="Kpe-VP-blV"/>
-                                            <constraint firstItem="PiX-Y9-PQS" firstAttribute="leading" secondItem="fd0-L9-RGy" secondAttribute="leading" id="e60-jX-iAn"/>
-                                        </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hEU-vP-AET" userLabel="Choose Weapons Stack">
-                                        <rect key="frame" x="35" y="481.5" width="280" height="80"/>
-                                        <subviews>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zt0-TS-O2o">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="80" id="8Pl-jH-P2f"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="Phx-ey-K2I"/>
-                                                </constraints>
-                                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                                <state key="normal" title="Weapon1" image="nuclearBomb"/>
-                                                <connections>
-                                                    <action selector="chooseWeapon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ec2-VQ-uAq"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mpl-rU-A6Y">
-                                                <rect key="frame" x="100" y="0.0" width="80" height="80"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="80" id="7uR-vz-G5w"/>
-                                                    <constraint firstAttribute="width" constant="80" id="AGN-YH-iDI"/>
-                                                </constraints>
-                                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                                <state key="normal" title="Weapon2" image="car"/>
-                                                <connections>
-                                                    <action selector="chooseWeapon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JZy-bo-Yxd"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wJ-Gg-FF8">
-                                                <rect key="frame" x="200" y="0.0" width="80" height="80"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="BbU-ez-RbE"/>
-                                                    <constraint firstAttribute="height" constant="80" id="jlU-93-aGQ"/>
-                                                </constraints>
-                                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                                <state key="normal" title="Weapon3" image="boot"/>
-                                                <connections>
-                                                    <action selector="chooseWeapon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GVx-v2-Uvx"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFh-8l-Rvi">
-                                        <rect key="frame" x="58" y="611.5" width="234" height="45"/>
+                                        <rect key="frame" x="61.5" y="689" width="251" height="45"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="DJG-7s-mVN"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="30"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="30"/>
                                         <inset key="contentEdgeInsets" minX="80" minY="10" maxX="80" maxY="10"/>
                                         <state key="normal" title="Shoot">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -188,21 +159,25 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="fd0-L9-RGy" secondAttribute="trailing" id="64W-1A-3y0"/>
-                                    <constraint firstItem="fd0-L9-RGy" firstAttribute="leading" secondItem="i8x-cJ-sBu" secondAttribute="leading" id="ITx-sa-Txb"/>
-                                </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jt-3s-HYG">
-                                <rect key="frame" x="309" y="54" width="61" height="38"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="contentEdgeInsets" minX="5" minY="10" maxX="5" maxY="10"/>
-                                <state key="normal" title="Armory">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZf-nu-X4j">
+                                <rect key="frame" x="27" y="46" width="30.5" height="26.5"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="house.fill" catalog="system" symbolScale="large"/>
                                 </state>
                                 <connections>
-                                    <action selector="armory:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L6z-fL-Xa7"/>
-                                    <segue destination="h3L-UC-kOt" kind="presentation" identifier="goToArmory" id="jZ8-Jm-xbj"/>
+                                    <action selector="home:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BIb-G9-uQ6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhr-WR-2qc">
+                                <rect key="frame" x="377.5" y="46" width="26.5" height="26.5"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="gearshape.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="showSettings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YVm-wt-vFy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -210,25 +185,25 @@
                         <color key="backgroundColor" red="0.081985749304294586" green="0.95253103971481323" blue="0.65925151109695435" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="i8x-cJ-sBu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="3Am-06-QGT"/>
+                            <constraint firstItem="AZf-nu-X4j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="3NW-tX-Sbx"/>
+                            <constraint firstItem="lhr-WR-2qc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-2" id="61e-mH-kI1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="i8x-cJ-sBu" secondAttribute="bottom" constant="30" id="LX8-wJ-h6L"/>
-                            <constraint firstItem="6jt-3s-HYG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="UmI-ta-Bci"/>
+                            <constraint firstAttribute="trailing" secondItem="lhr-WR-2qc" secondAttribute="trailing" constant="10" id="MD3-ja-lPB"/>
                             <constraint firstItem="i8x-cJ-sBu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YKb-WB-Akk"/>
-                            <constraint firstItem="6jt-3s-HYG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ejt-3f-q30"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i8x-cJ-sBu" secondAttribute="trailing" constant="20" id="fHi-V0-X3T"/>
+                            <constraint firstItem="AZf-nu-X4j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-2" id="hWj-Zo-UTU"/>
                             <constraint firstItem="i8x-cJ-sBu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mtk-HL-viO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6jt-3s-HYG" secondAttribute="trailing" constant="20" id="pwh-qL-RI0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Sj2-mg-vtB"/>
                     <connections>
-                        <outlet property="OpponentScoreOne" destination="syZ-5G-DiB" id="Dur-LE-NBf"/>
-                        <outlet property="OpponentScoreThree" destination="wyB-3o-l6B" id="w34-07-vbf"/>
-                        <outlet property="OpponentScoreTwo" destination="U30-uG-4Za" id="pjz-lw-SnR"/>
-                        <outlet property="UserScoreOne" destination="Mmx-zg-eYt" id="vO0-6p-U6y"/>
-                        <outlet property="UserScoreThree" destination="cSS-bm-DJj" id="EnW-2r-oPW"/>
-                        <outlet property="UserScoreTwo" destination="VEK-GI-JfZ" id="UdU-yR-yFE"/>
-                        <outlet property="armoryButton" destination="6jt-3s-HYG" id="dhx-Ec-nTO"/>
+                        <outlet property="gameScore" destination="j5s-ze-vm7" id="qEV-DD-Zdg"/>
+                        <outlet property="homeButton" destination="AZf-nu-X4j" id="ReI-Lu-oZ3"/>
                         <outlet property="opponentChoice" destination="Cph-9V-l3o" id="q3d-4U-a9I"/>
+                        <outlet property="opponentWeaponOne" destination="u8B-nK-bhS" id="nxd-ef-r0Y"/>
+                        <outlet property="opponentWeaponThree" destination="v1p-ws-C11" id="CnG-4z-LOm"/>
+                        <outlet property="opponentWeaponTwo" destination="OPd-bI-eKZ" id="gYj-HV-EgW"/>
+                        <outlet property="settingsButton" destination="lhr-WR-2qc" id="CWt-0A-QtV"/>
                         <outlet property="shootButton" destination="MFh-8l-Rvi" id="DUr-Mt-l84"/>
                         <outlet property="userChoice" destination="6Zr-fQ-OGD" id="rIb-Fz-Jj8"/>
                         <outlet property="weaponOne" destination="zt0-TS-O2o" id="0yT-z7-etm"/>
@@ -240,7 +215,198 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-278" y="76"/>
+            <point key="canvasLocation" x="95613" y="-89"/>
+        </scene>
+        <!--Choose Weapons-->
+        <scene sceneID="P1g-DT-ILH">
+            <objects>
+                <viewController id="8wD-FI-3Yd" customClass="ChooseWeapons" customModule="Rock_Paper_Scissors_Plus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S44-42-iJV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="bRr-wM-fJS">
+                                <rect key="frame" x="20" y="60" width="374" height="772"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the Armory!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPB-cH-Jtk">
+                                        <rect key="frame" x="21.5" y="0.0" width="331.5" height="30.5"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose 3 Weapons" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPb-7w-3Y5">
+                                        <rect key="frame" x="87" y="80.5" width="200" height="24"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="120" translatesAutoresizingMaskIntoConstraints="NO" id="eFl-9n-FZP">
+                                        <rect key="frame" x="47" y="154.5" width="280" height="495.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5ap-wv-Xon" userLabel="Choose Weapons Stack">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="495.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIh-od-x1c">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="Sch-dT-NxF"/>
+                                                            <constraint firstAttribute="height" constant="80" id="ZdP-Ph-IPq"/>
+                                                        </constraints>
+                                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                        <state key="normal" title="nuclearBomb" image="nuclearBomb"/>
+                                                        <connections>
+                                                            <action selector="chooseWeapons:" destination="8wD-FI-3Yd" eventType="touchUpInside" id="3Qi-Hf-h9w"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBm-qL-ZvG">
+                                                        <rect key="frame" x="0.0" y="104" width="80" height="80"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="80" id="UhF-5D-VEA"/>
+                                                            <constraint firstAttribute="width" constant="80" id="aDz-ws-oXo"/>
+                                                        </constraints>
+                                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                        <state key="normal" title="car" image="car"/>
+                                                        <connections>
+                                                            <action selector="chooseWeapons:" destination="8wD-FI-3Yd" eventType="touchUpInside" id="M7X-Kq-mLX"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVT-G5-g8e">
+                                                        <rect key="frame" x="0.0" y="208" width="80" height="80"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="80" id="e0M-5a-qcw"/>
+                                                            <constraint firstAttribute="width" constant="80" id="qrE-Zk-HKo"/>
+                                                        </constraints>
+                                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                        <state key="normal" title="dinosaur" image="dinosaur"/>
+                                                        <connections>
+                                                            <action selector="chooseWeapons:" destination="8wD-FI-3Yd" eventType="touchUpInside" id="rFG-IR-6fj"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WoM-P9-stl">
+                                                        <rect key="frame" x="0.0" y="311.5" width="80" height="80"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="0OT-xM-L8a"/>
+                                                            <constraint firstAttribute="height" constant="80" id="ek7-DJ-Vdt"/>
+                                                        </constraints>
+                                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                        <state key="normal" title="meteor" image="meteor"/>
+                                                        <connections>
+                                                            <action selector="chooseWeapons:" destination="8wD-FI-3Yd" eventType="touchUpInside" id="d1q-7g-0Rh"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFB-gJ-DOy">
+                                                        <rect key="frame" x="0.0" y="415.5" width="80" height="80"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="KD4-dO-b4O"/>
+                                                            <constraint firstAttribute="height" constant="80" id="PMx-No-dja"/>
+                                                        </constraints>
+                                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                        <state key="normal" title="rock" image="rock"/>
+                                                        <connections>
+                                                            <action selector="chooseWeapons:" destination="8wD-FI-3Yd" eventType="touchUpInside" id="nI8-FK-ss0"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jrZ-hW-jDs" userLabel="Choose Weapons Stack">
+                                                <rect key="frame" x="200" y="0.0" width="80" height="495.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3x-JP-R1O">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="VUw-di-Vuh"/>
+                                                            <constraint firstAttribute="height" constant="80" id="WU2-oK-G2f"/>
+                                                        </constraints>
+                                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                        <state key="normal" title="boot" image="boot"/>
+                                                        <connections>
+                                                            <action selector="chooseWeapons:" destination="8wD-FI-3Yd" eventType="touchUpInside" id="o4O-uk-34O"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNQ-P2-bC2">
+                                                        <rect key="frame" x="0.0" y="104" width="80" height="80"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="80" id="aVV-ya-B1w"/>
+                                                            <constraint firstAttribute="width" constant="80" id="mNA-Ez-NrA"/>
+                                                        </constraints>
+                                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                        <state key="normal" title="cockroach" image="cockroach"/>
+                                                        <connections>
+                                                            <action selector="chooseWeapons:" destination="8wD-FI-3Yd" eventType="touchUpInside" id="J1o-8X-Xsd"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywv-D5-FAy">
+                                                        <rect key="frame" x="0.0" y="208" width="80" height="80"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="80" id="FJt-rW-ley"/>
+                                                            <constraint firstAttribute="height" constant="80" id="v1n-C5-dzQ"/>
+                                                        </constraints>
+                                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                        <state key="normal" title="dynamite" image="dynamite"/>
+                                                        <connections>
+                                                            <action selector="chooseWeapons:" destination="8wD-FI-3Yd" eventType="touchUpInside" id="8vz-Do-g2r"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdn-3C-nF4">
+                                                        <rect key="frame" x="0.0" y="311.5" width="80" height="80"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="80" id="Xcw-WV-sbc"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="qtZ-bK-A3E"/>
+                                                        </constraints>
+                                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                        <state key="normal" title="paper" image="paper"/>
+                                                        <connections>
+                                                            <action selector="chooseWeapons:" destination="8wD-FI-3Yd" eventType="touchUpInside" id="0YM-uB-LO3"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPA-Sm-rnh">
+                                                        <rect key="frame" x="0.0" y="415.5" width="80" height="80"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="80" id="Bsa-JR-MNT"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="EHB-Z3-bRw"/>
+                                                        </constraints>
+                                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                        <state key="normal" title="scissors" image="scissors"/>
+                                                        <connections>
+                                                            <action selector="chooseWeapons:" destination="8wD-FI-3Yd" eventType="touchUpInside" id="ylg-Vu-fFl"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Be2-fn-JgK">
+                                        <rect key="frame" x="72" y="700" width="230" height="72"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="41"/>
+                                        <inset key="contentEdgeInsets" minX="40" minY="10" maxX="40" maxY="10"/>
+                                        <state key="normal" title="Submit">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="submit:" destination="8wD-FI-3Yd" eventType="touchUpInside" id="myh-wh-q1l"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="WPL-1a-c1S"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gwT-p4-tXs"/>
+                        <color key="backgroundColor" red="0.084916867315769196" green="0.95150643587112427" blue="0.65941870212554932" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gwT-p4-tXs" firstAttribute="trailing" secondItem="bRr-wM-fJS" secondAttribute="trailing" constant="20" id="EAa-cn-gq9"/>
+                            <constraint firstItem="bRr-wM-fJS" firstAttribute="top" secondItem="gwT-p4-tXs" secondAttribute="top" constant="12" id="J9N-Mg-X7c"/>
+                            <constraint firstItem="gwT-p4-tXs" firstAttribute="bottom" secondItem="bRr-wM-fJS" secondAttribute="bottom" constant="30" id="Wv5-oj-6Is"/>
+                            <constraint firstItem="bRr-wM-fJS" firstAttribute="leading" secondItem="gwT-p4-tXs" secondAttribute="leading" constant="20" id="dcp-eq-2CG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ET0-pH-Lv9"/>
+                    <connections>
+                        <outlet property="submitButton" destination="Be2-fn-JgK" id="6gE-v4-KJY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SnG-7u-rgM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="94806" y="-89"/>
         </scene>
         <!--Game Over View Controller-->
         <scene sceneID="hmC-dX-Afd">
@@ -250,41 +416,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="equalSpacing" spacing="138" translatesAutoresizingMaskIntoConstraints="NO" id="4Lp-dg-co2">
-                                <rect key="frame" x="35.5" y="154.5" width="343" height="587"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="equalSpacing" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="4Lp-dg-co2">
+                                <rect key="frame" x="49" y="135" width="316" height="626"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNY-l3-hRi">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="86"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="72"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="gameOver" translatesAutoresizingMaskIntoConstraints="NO" id="C8O-Ug-qxG">
+                                        <rect key="frame" x="0.0" y="0.0" width="316" height="300"/>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Won!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKR-OY-6Fz">
-                                        <rect key="frame" x="0.0" y="224" width="343" height="84"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="400" width="316" height="76"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="60"/>
+                                        <color key="textColor" systemColor="systemBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRN-h8-m0k">
-                                        <rect key="frame" x="0.0" y="446" width="343" height="141"/>
-                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                        <rect key="frame" x="0.0" y="576" width="316" height="50"/>
+                                        <color key="backgroundColor" red="0.084916867315769196" green="0.95150643587112427" blue="0.65941870212554932" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="141" id="MpI-gU-KEb"/>
+                                            <constraint firstAttribute="height" constant="50" id="MpI-gU-KEb"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="32"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                         <state key="normal" title="Play Again?">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="5Co-hm-mFl" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="12r-eP-WXx"/>
+                                            <action selector="playAgainButton:" destination="ULz-Ly-yhI" eventType="touchUpInside" id="XCA-yB-Orr"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hhh-OK-BZf"/>
-                        <color key="backgroundColor" red="0.084223724901676178" green="0.95153814554214478" blue="0.65932661294937134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="4Lp-dg-co2" firstAttribute="centerY" secondItem="rlQ-58-Hyo" secondAttribute="centerY" id="UGD-fs-ns3"/>
                             <constraint firstItem="4Lp-dg-co2" firstAttribute="centerX" secondItem="rlQ-58-Hyo" secondAttribute="centerX" id="Zfe-aA-ggQ"/>
@@ -298,145 +461,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MWM-by-niS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-278.26086956521743" y="757.36607142857144"/>
+            <point key="canvasLocation" x="95612" y="605"/>
         </scene>
-        <!--Armory View Controller-->
-        <scene sceneID="cdZ-Ol-s17">
-            <objects>
-                <viewController id="h3L-UC-kOt" customClass="ArmoryViewController" customModule="Rock_Paper_Scissors_Plus" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="CwJ-Ki-FCl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" id="MIx-a2-3J0" userLabel="AllWeaponsStack">
-                                <rect key="frame" x="36.5" y="20" width="341" height="748"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Jhc-pi-kyS">
-                                        <rect key="frame" x="67" y="0.0" width="207" height="40"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the Armory!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzH-Oj-Dqn">
-                                                <rect key="frame" x="0.0" y="0.0" width="207" height="19.5"/>
-                                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe to choose weapon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSi-Y1-UfZ">
-                                                <rect key="frame" x="7" y="19.5" width="193.5" height="20.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="20.5" id="SSd-p0-fQx"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="19"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" id="vQi-t0-daC">
-                                        <rect key="frame" x="0.0" y="60" width="341" height="192"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weapon 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13S-M5-Nia">
-                                                <rect key="frame" x="0.0" y="85" width="170.5" height="22"/>
-                                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="19"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <pickerView contentMode="scaleToFill" id="tCP-ze-D5E">
-                                                <rect key="frame" x="170.5" y="0.0" width="170.5" height="192"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </pickerView>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" id="bDR-vP-YGy">
-                                        <rect key="frame" x="0.0" y="272" width="341" height="191.5"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weapon 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHz-hW-RG7">
-                                                <rect key="frame" x="0.0" y="85" width="170.5" height="22"/>
-                                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="19"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <pickerView contentMode="scaleAspectFill" id="kjN-Xb-zed">
-                                                <rect key="frame" x="170.5" y="0.0" width="170.5" height="191.5"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </pickerView>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" id="9eM-Ve-CEW">
-                                        <rect key="frame" x="0.0" y="483.5" width="341" height="192"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weapon 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNi-8C-ghe">
-                                                <rect key="frame" x="0.0" y="85" width="170.5" height="22"/>
-                                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="19"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <pickerView contentMode="scaleAspectFill" id="iWG-Oa-cHE">
-                                                <rect key="frame" x="170.5" y="0.0" width="170.5" height="192"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </pickerView>
-                                        </subviews>
-                                    </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ggd-az-CWK">
-                                        <rect key="frame" x="68" y="695.5" width="205" height="52.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="41"/>
-                                        <inset key="contentEdgeInsets" minX="40" minY="10" maxX="40" maxY="10"/>
-                                        <state key="normal" title="Submit">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="submit:" destination="h3L-UC-kOt" eventType="touchUpInside" id="PBi-fd-BX7"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="vQi-t0-daC" firstAttribute="centerX" secondItem="MIx-a2-3J0" secondAttribute="centerX" id="LHR-LG-CJw"/>
-                                    <constraint firstItem="bDR-vP-YGy" firstAttribute="centerX" secondItem="MIx-a2-3J0" secondAttribute="centerX" id="Nxf-8W-O6O"/>
-                                    <constraint firstItem="Ggd-az-CWK" firstAttribute="centerX" secondItem="MIx-a2-3J0" secondAttribute="centerX" id="cOu-NC-3cy"/>
-                                    <constraint firstItem="9eM-Ve-CEW" firstAttribute="centerX" secondItem="MIx-a2-3J0" secondAttribute="centerX" id="dWa-PX-spj"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="34l-oL-Ubp"/>
-                        <color key="backgroundColor" red="0.12941176470588234" green="0.14509803921568626" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="MIx-a2-3J0" firstAttribute="centerX" secondItem="34l-oL-Ubp" secondAttribute="centerX" id="9Wi-Yp-ujC"/>
-                            <constraint firstItem="MIx-a2-3J0" firstAttribute="bottom" secondItem="34l-oL-Ubp" secondAttribute="bottom" constant="30" id="BfZ-HZ-L9U"/>
-                            <constraint firstItem="MIx-a2-3J0" firstAttribute="top" secondItem="34l-oL-Ubp" secondAttribute="top" constant="20" id="zcn-Wi-Kks"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="NS7-MN-mBc"/>
-                    <connections>
-                        <outlet property="AllWeaponsStack" destination="MIx-a2-3J0" id="buJ-wb-deS"/>
-                        <outlet property="WeaponOneStack" destination="vQi-t0-daC" id="6gT-SX-Mt2"/>
-                        <outlet property="WeaponThreeStack" destination="9eM-Ve-CEW" id="HUq-8F-0un"/>
-                        <outlet property="WeaponTwoStack" destination="bDR-vP-YGy" id="5vC-xS-rtm"/>
-                        <outlet property="pickerOne" destination="tCP-ze-D5E" id="wy9-Aq-TwI"/>
-                        <outlet property="pickerThree" destination="iWG-Oa-cHE" id="VZZ-Hp-qdU"/>
-                        <outlet property="pickerTwo" destination="kjN-Xb-zed" id="JaT-gD-zlW"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="submitWeapons" modalPresentationStyle="fullScreen" id="mR7-pj-zZm"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="txV-kw-ivL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="450.72463768115944" y="75.669642857142847"/>
-        </scene>
-        <!--Start View Controller-->
+        <!--startScreen-->
         <scene sceneID="RT6-HI-hbB">
             <objects>
-                <viewController id="5Co-hm-mFl" customClass="StartViewController" customModule="Rock_Paper_Scissors_Plus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="startScreen" storyboardIdentifier="startScreen" title="startScreen" id="5Co-hm-mFl" customClass="StartViewController" customModule="Rock_Paper_Scissors_Plus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G9F-o7-itL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gJg-Hp-813">
-                                <rect key="frame" x="20" y="64" width="374" height="114"/>
+                                <rect key="frame" x="20" y="68" width="374" height="114"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56k-x6-SpW">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="114"/>
@@ -449,23 +485,45 @@ Um9jaywgUGFwZXIsAwMDIFNjaXNzb3JzICs
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABK-Q5-yht">
-                                <rect key="frame" x="65" y="751" width="284" height="101"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="101" id="6Cr-Ia-d9z"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="70"/>
-                                <inset key="contentEdgeInsets" minX="30" minY="5" maxX="30" maxY="5"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="vK3-bt-J9Q"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="6Qi-ey-CaM">
+                                <rect key="frame" x="20" y="697" width="374" height="155"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABK-Q5-yht">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="6Cr-Ia-d9z"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="40"/>
+                                        <inset key="contentEdgeInsets" minX="30" minY="5" maxX="30" maxY="5"/>
+                                        <state key="normal" title="Unlimited">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="unlimited:" destination="5Co-hm-mFl" eventType="touchUpInside" id="1Fh-st-vGw"/>
+                                            <segue destination="8wD-FI-3Yd" kind="presentation" modalPresentationStyle="fullScreen" id="uud-TD-Kh7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1B-Ax-jOo">
+                                        <rect key="frame" x="0.0" y="105" width="374" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="oW8-bH-yhz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="40"/>
+                                        <inset key="contentEdgeInsets" minX="30" minY="5" maxX="30" maxY="5"/>
+                                        <state key="normal" title="First to 3">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="threeRounds:" destination="5Co-hm-mFl" eventType="touchUpInside" id="Dna-D3-R0e"/>
+                                            <segue destination="8wD-FI-3Yd" kind="presentation" modalPresentationStyle="fullScreen" id="Bfv-FY-aNQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Start" translatesAutoresizingMaskIntoConstraints="NO" id="bXg-jt-GSw">
-                                <rect key="frame" x="20" y="175" width="374" height="546"/>
+                                <rect key="frame" x="20" y="179" width="374" height="538"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="R6n-RQ-JNg"/>
@@ -473,42 +531,143 @@ Um9jaywgUGFwZXIsAwMDIFNjaXNzb3JzICs
                         <constraints>
                             <constraint firstItem="bXg-jt-GSw" firstAttribute="top" secondItem="R6n-RQ-JNg" secondAttribute="top" constant="131" id="3Fw-K7-bDM"/>
                             <constraint firstItem="gJg-Hp-813" firstAttribute="top" secondItem="R6n-RQ-JNg" secondAttribute="top" constant="20" id="Jd2-fV-luq"/>
+                            <constraint firstItem="6Qi-ey-CaM" firstAttribute="leading" secondItem="R6n-RQ-JNg" secondAttribute="leading" constant="20" id="KBT-Gw-IX4"/>
                             <constraint firstItem="bXg-jt-GSw" firstAttribute="leading" secondItem="gJg-Hp-813" secondAttribute="leading" id="L5y-wz-8Rj"/>
                             <constraint firstAttribute="trailing" secondItem="gJg-Hp-813" secondAttribute="trailing" constant="20" id="PGU-VU-HNe"/>
                             <constraint firstItem="bXg-jt-GSw" firstAttribute="centerY" secondItem="G9F-o7-itL" secondAttribute="centerY" id="V6t-8r-fqo"/>
+                            <constraint firstItem="R6n-RQ-JNg" firstAttribute="trailing" secondItem="6Qi-ey-CaM" secondAttribute="trailing" constant="20" id="bd0-Pm-HLd"/>
                             <constraint firstItem="bXg-jt-GSw" firstAttribute="centerX" secondItem="G9F-o7-itL" secondAttribute="centerX" id="cjS-6f-I5p"/>
-                            <constraint firstItem="ABK-Q5-yht" firstAttribute="leading" secondItem="R6n-RQ-JNg" secondAttribute="leading" constant="65" id="iZJ-NV-yXr"/>
-                            <constraint firstItem="R6n-RQ-JNg" firstAttribute="bottom" secondItem="ABK-Q5-yht" secondAttribute="bottom" constant="10" id="ju9-f2-fPw"/>
-                            <constraint firstItem="gJg-Hp-813" firstAttribute="centerX" secondItem="ABK-Q5-yht" secondAttribute="centerX" id="m0s-zv-l5N"/>
+                            <constraint firstItem="R6n-RQ-JNg" firstAttribute="bottom" secondItem="6Qi-ey-CaM" secondAttribute="bottom" constant="10" id="mxZ-iy-weg"/>
                             <constraint firstItem="gJg-Hp-813" firstAttribute="leading" secondItem="G9F-o7-itL" secondAttribute="leading" constant="20" id="yoZ-jy-2k5"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="startGame" destination="ABK-Q5-yht" id="nHR-35-Efx"/>
+                        <outlet property="threeRounds" destination="p1B-Ax-jOo" id="DAa-uI-D5g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hny-8D-iph" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-975.36231884057975" y="75.669642857142847"/>
+            <point key="canvasLocation" x="94005.79710144928" y="-89.0625"/>
+        </scene>
+        <!--settings-->
+        <scene sceneID="J2E-Yu-yOi">
+            <objects>
+                <viewController restorationIdentifier="settings" storyboardIdentifier="settings" title="settings" id="w6M-1B-kGh" customClass="SettingsViewController" customModule="Rock_Paper_Scissors_Plus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pv0-i3-8Nh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.85000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WYL-tE-rTD">
+                                <rect key="frame" x="45" y="303" width="324" height="290"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCe-Ln-Nkg">
+                                        <rect key="frame" x="297.5" y="-10" width="36.5" height="38"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        <state key="normal">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeButtonAction:" destination="w6M-1B-kGh" eventType="touchUpInside" id="rzB-l4-TyP"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Sgb-lE-IKr">
+                                        <rect key="frame" x="114.5" y="80" width="95" height="202"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="178-O1-LEI">
+                                                <rect key="frame" x="0.0" y="0.0" width="95" height="30"/>
+                                                <state key="normal" title="Privacy Policy">
+                                                    <color key="titleColor" red="1" green="0.1473437839" blue="0.044877464329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="privacyPolicy:" destination="w6M-1B-kGh" eventType="touchUpInside" id="wWh-jP-yVv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbj-ss-P0w">
+                                                <rect key="frame" x="0.0" y="86" width="95" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="No Ads">
+                                                    <color key="titleColor" red="1" green="0.1473437839" blue="0.044877464329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="noAds:" destination="w6M-1B-kGh" eventType="touchUpInside" id="BCA-6M-pzD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AO8-zd-mEm">
+                                                <rect key="frame" x="9" y="40" width="77" height="162"/>
+                                                <state key="normal" title="Contact Us">
+                                                    <color key="titleColor" red="1" green="0.1473437839" blue="0.044877464329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="emailUs:" destination="w6M-1B-kGh" eventType="touchUpInside" id="PXz-Lg-3NZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="xbj-ss-P0w"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Sgb-lE-IKr" firstAttribute="top" secondItem="WYL-tE-rTD" secondAttribute="top" constant="80" id="MlJ-b5-91C"/>
+                                    <constraint firstItem="GCe-Ln-Nkg" firstAttribute="top" secondItem="WYL-tE-rTD" secondAttribute="top" constant="-10" id="RAT-86-Nlh"/>
+                                    <constraint firstAttribute="height" constant="290" id="W0B-9F-a1K"/>
+                                    <constraint firstAttribute="trailing" secondItem="GCe-Ln-Nkg" secondAttribute="trailing" constant="-10" id="cTg-HH-Pck"/>
+                                    <constraint firstItem="Sgb-lE-IKr" firstAttribute="centerX" secondItem="WYL-tE-rTD" secondAttribute="centerX" id="ilU-BI-DT1"/>
+                                    <constraint firstItem="Sgb-lE-IKr" firstAttribute="centerY" secondItem="WYL-tE-rTD" secondAttribute="centerY" constant="36" id="q1z-M4-eAf"/>
+                                    <constraint firstAttribute="width" constant="324" id="r8l-ID-3TJ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1Kb-rd-yD1"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WYL-tE-rTD" firstAttribute="centerY" secondItem="pv0-i3-8Nh" secondAttribute="centerY" id="WB1-7U-gIQ"/>
+                            <constraint firstItem="WYL-tE-rTD" firstAttribute="centerX" secondItem="pv0-i3-8Nh" secondAttribute="centerX" id="an9-3a-UEz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qjN-F3-A5J"/>
+                    <connections>
+                        <outlet property="closeButton" destination="GCe-Ln-Nkg" id="BHg-7d-EJ6"/>
+                        <outlet property="settingMainView" destination="WYL-tE-rTD" id="24q-Zf-yJm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S7p-2w-MJs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="94805.79710144928" y="588.61607142857144"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vK3-bt-J9Q"/>
+        <segue reference="Bfv-FY-aNQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Start" width="1024" height="1024"/>
         <image name="boot" width="1024" height="1024"/>
         <image name="car" width="1024" height="1024"/>
-        <image name="circle" catalog="system" width="128" height="121"/>
+        <image name="cockroach" width="1024" height="1024"/>
+        <image name="dinosaur" width="1024" height="1024"/>
+        <image name="dynamite" width="1024" height="1024"/>
+        <image name="gameOver" width="300" height="300"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="meteor" width="1024" height="1024"/>
         <image name="nuclearBomb" width="1024" height="1024"/>
+        <image name="paper" width="1024" height="1024"/>
+        <image name="rock" width="1024" height="1024"/>
+        <image name="scissors" width="1024" height="1024"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
