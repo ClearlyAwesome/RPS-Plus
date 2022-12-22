@@ -100,7 +100,7 @@ extension GamePlayViewController: GADBannerViewDelegate, GADFullScreenContentDel
             print("Ad didn't load or wasn't ready")
         }
         //Change this add Unit id to below when ready to publish
-        //                oInterstitial.adUnitID = "ca-app-pub-5243010963011406/8626264860"
+        //                oInterstitial.adUnitID = "ad unit"
     }
     //    func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
     //        print("Error: \(error.localizedDescription)")
